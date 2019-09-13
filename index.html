@@ -1,64 +1,275 @@
 <!DOCTYPE html>
+<html>
 <head>
-	<title>GDG Leeds</title>
-	<link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>GDG Leeds</title>
+
+    <!-- CSS  -->
+    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+    <script src="https://kit.fontawesome.com/5c17b03b45.js"></script>
+
+    <!-- MapBox-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet' />
 </head>
-<body>
-	<header>
-		<div class="logo">
-			<img src="" alt=""/>
-		</div>
-		<nav>
-			<ul>
-				<li>The Group</li>
-				<li>Events</li>
-				<li>Our Sponsors</li>
-				<li>Volunteers & Organisers</li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<div class="row">
-			<h1>The Group</h1>
-			<p>
-				Lorem Ipsum
-			</p>
-		</div>
-		<div class="row">
-			<h1>Events</h1>
-			<p>
-				Lorem Ipsum
-			</p>
-		</div>
-		<div class="row">
-			<h1>Our Sponsors</h1>
-			<p>
-				Lorem Ipsum
-			</p>
-		</div>
-		<div class="row">
-			<h1>Volunteers & Organisers</h1>
-			<p>
-					Lorem Ipsum
-			</p>
-		</div>
-	</main>
-	<footer>
-		<div class="social__media__group">
-			<div>
-				<img src="" alt="Meetup.com"/>
-			</div>
-			<div>
-				<img src="" alt="Twitter" />
-			</div>
-		</div>
-		<div class="disclaimer">
-				Disclaimer: GDG Leeds is an independent group; our activities and the opinions expressed here should in no way be linked to Google, the corporation. To learn more about the GDG program, visit <a href="https://developers.google.com/groups">https://developers.google.com/groups</a>
-		</div>
-		<div class="copyright">
-			&copy; GDG Leeds 2017 - 2019
-		</div>
-	</footer>
-</body>
+<body id="top" class="scrollspy">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="#" id="logo-container" class="brand-logo">GDG Leeds</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#intro">Info</a></li>
+                    <li><a href="#work">Events</a></li>
+                    <li><a href="#city">City</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Sponsors</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#intro">Info</a></li>
+                    <li><a href="#work">Events</a></li>
+                    <li><a href="#city">City</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Sponsors</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <img src="img/gdg_leeds_banner.png" style="width: 100%"/>
+            </div>
+        
+            <div  class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                        <i class="fas fa-people-carry"></i> </br>
+
+                        <h5 class="promo-caption">Community driven</h5>
+                    <p class="light center">
+                        Managed by passionate individuals in the developer community, GDG Leeds is a place where people can learn and innovate together, share their knowledge, meet new interesting people and discover what local companies and developers and doing.        
+                    </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                        <i class="fas fa-code"></i> </br>
+
+                        <h5 class="promo-caption">Developer Focused</h5>
+                    <p class="light center">
+                        GDG Leeds focuses on introducing cool new technologies to the wide audience with experienced speakers from all over the world. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="fab fa-meetup"></i> </br>
+                    <h5 class="promo-caption">Become a member</h5>
+                    <p class="light center">Are you interested in getting to know us? Join us on our <a href="https://meetup.com/GDG-Leeds/">meetup page</a>!</p>
+                </div>
+            </div>            
+            
+            
+        </div>
+    </div>
+</div>
+
+<!--Events-->
+<div class="section scrollspy" id="work">
+    <div class="container">
+        <h2 class="header text_b">Events</h2>
+        <div class="row">
+	        
+            <div class="col s12 m4 l4">  
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/september_meetup.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">AITechNorth Extended<i class="mdi-navigation-more-vert right"></i></span>
+                        
+                        <p>
+                            <i class="far fa-calendar-alt"></i> 12 September 2019, 5.30PM </br>
+                            <i class="fas fa-directions"></i> Infinity Works, Leeds</br>
+                            <i class="fab fa-meetup"></i> <a href="https://www.meetup.com/GDG-Leeds/events/264024341/">Meetup Page</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">September Meetup<i class="mdi-navigation-close right"></i></span>
+                        <p>
+                            Our first official meetup is a fact!
+                            You can check pictures from the event here
+                        </p>
+                    </div>
+                </div>
+            </div>           
+
+        </div>
+
+        </br></br></br>
+        <h2 class="header text_b">Leeds City</h2>
+    </div>
+</div>
+
+<!--City-->
+<div class="section scrollspy" id="city" style='position:relative; height:800px'>
+    <div id='map' style='position:absolute; top:0; bottom:0; width: 100%; height: 800px'></div>
+    <h2 class="header text_b">The City</h2>
+
+    <style>
+        .mapboxgl-popup {
+            max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+
+        .marker {
+            display: block;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0;
+        }
+    </style>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoieW9rbzgzMzIiLCJhIjoiY2pqMDltY28xMGU4eDN3czJyeXNvZ3l1YiJ9.3vQ9J2aA8E9-hBz_R3nAzg';
+    var geojson = {
+        "type": "FeatureCollection",
+        "features": [{
+            "type": "Feature",
+            "properties": {
+                "message": "Inifnity Works",
+                "iconSize": [30, 30]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-1.5562257, 53.7968193]
+            }
+        }]
+    };
+     
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',    
+        center: [-1.5486843, 53.8005894],
+        zoom: 13
+    });
+    map.scrollZoom.disable();
+
+     
+    // add markers to map
+    geojson.features.forEach(function(marker) {
+        // create a DOM element for the marker
+        var el = document.createElement('div');
+        el.className = 'marker';
+        el.style.backgroundImage = "url(https://pbs.twimg.com/profile_images/739532214858358784/7FBzNnuQ_400x400.jpg)";
+        el.style.backgroundSize = "cover";
+        el.style.width = marker.properties.iconSize[0] + 'px';
+        el.style.height = marker.properties.iconSize[1] + 'px';
+     
+        el.addEventListener('click', function() {
+            window.alert(marker.properties.message);
+        });
+     
+        // add marker to map
+        new mapboxgl.Marker(el)
+            .setLngLat(marker.geometry.coordinates)
+            .addTo(map);
+    });
+    </script>
+</div>
+
+<!--Team-->
+<div class="section scrollspy" id="team">
+    <div class="container">
+        <h2 class="header text_b">The team</h2>
+        <div class="row">
+            
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/george_kortsaridis.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">George Kortsaridis<br/>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/gkortsaridis">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/gkortsaridis">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/georgekortsaridis/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Sponsors -->
+<div class="section scrollspy" id="sponsors">
+    <div class="container">
+        <h2 class="header text_b">Our Sponsors</h2>
+        <div class="row"> 
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img style='object-fit: contain;' src="img/infinity_works.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Infinity Works<br/>
+                        <small><em>Gold Sponsor</em></small><br>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            Need a footer here
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container">
+            <!-- MY FOOTER -->
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="min/plugin-min.js"></script>
+<script src="min/custom-min.js"></script>
+
+    </body>
 </html>
